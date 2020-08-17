@@ -1,13 +1,59 @@
-// @import "vars";
-// @import "global";
-// @import "fonts";
+@import "vars";
+@import "global";
+@import "fonts";
 
-html {
-  box-sizing: border-box;
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-items: center;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.header__text {
+  margin-left: auto;
+  margin-right: 50px;
+  span {
+    color: $red;
+  }
+}
+
+.header__btn {
+  padding: 4px;
+  width: 72px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.header__btn-login {
+  background-color: $green;
+  margin-right: 7px;
+}
+
+.header__btn-register {
+  background-color: $red;
+}
+
+.header__menu {
+  background-color: $bg;
+}
+
+.menu {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 40px;
+    }
+  }
+  a {
+    color: #fff;
+    font-size: 14px;
+  }
 }
