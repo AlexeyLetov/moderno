@@ -358,3 +358,36 @@
     color: $bg;
   }
 }
+
+.tutorial {
+  padding: 60px 0 120px;
+  &__title {
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__item-images {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__item-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    @include f700;
+    color: $bg;
+    padding: 30px 10px;
+  }
+}
