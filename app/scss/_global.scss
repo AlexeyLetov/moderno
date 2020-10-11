@@ -11,6 +11,8 @@ html {
 html,
 body {
   height: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 
 a {
@@ -58,6 +60,10 @@ body {
   padding: 0 30px;
 }
 
+#modal {
+  display: none;
+}
+
 @media (max-width: 720px) {
   .container-fluid {
     padding: 0 15px;
@@ -85,6 +91,8 @@ body {
 .breadcrumbs {
   &__inner {
     padding: 50px 0 40px;
+    overflow: hidden;
+    width: 1200px;
   }
 
   &__list {

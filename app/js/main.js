@@ -1,7 +1,5 @@
 $(function () {
 
-  // var mixer = mixitup('.products__inner-box');
-
   if ($('.products__inner-box').length) {
     var mixer = mixitup('.products__inner-box');
   }
@@ -25,7 +23,30 @@ $(function () {
     dots: true,
     arrows: false,
     slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 801,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $('.icon-th-list').on('click', function () {
@@ -48,5 +69,15 @@ $(function () {
     return false;
   });
 
+  $('input[type="file"], select').styler();
+
+
+  $('.header__btn-menu').on('click', function () {
+    $('.header__box').toggleClass('active');
+  });
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').slideToggle();
+  });
 
 });
